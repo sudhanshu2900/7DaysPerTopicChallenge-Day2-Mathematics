@@ -1,0 +1,46 @@
+PROBLEM: I/P- 5 3               (these are N(size of array) and M(No of case))
+                                      
+              0 1 100            (denotes 'a','b','k')   
+              1 4 100
+              2 3 100
+          
+         O/P- 200
+              
+         *Explain:- Initially whole array contain zero (0).
+                    Increment(a, b, k) : Increment values from 'a' to 'b' by 'k'. here we need to find max value of array.
+                    In above input, array will be- [100 100 0 0 0]
+                                                   [100 200 100 100 100]
+                                                   [100 200 200 200 100]
+                    Now max value is 200.
+          
+
+
+SOLUTION:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t,n,m,a,b,k;
+	
+	cin>>t;
+	while(t--){
+	    cin>>n>>m;
+	    int arr[n]={0};
+	    
+	    for(int j=0;j<m;j++){
+	        cin>>a>>b>>k;
+	        for(int i=a;i<=b;i++){
+    	        arr[i]=arr[i]+k;
+    	    }
+	    }
+	    
+	    int max=0;
+      for(int i=0;i<n;i++){
+          if(arr[i] > max)
+              max=arr[i];
+      }
+      cout<<max<<endl;
+    }
+    return 0;
+}
