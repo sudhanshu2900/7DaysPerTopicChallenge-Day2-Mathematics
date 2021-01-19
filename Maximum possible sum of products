@@ -1,0 +1,35 @@
+PROBLEM: I/P- A[]={1,2,3}               //Here, n is given in input that is size of both array.
+              B[]={4,5,1}
+         O/P- 24
+         
+         Explain: sort both array A[]={1,2,3}, B[]={1,4,5} then multiply each corresponding elements and sum it.
+                  (1*1)+(2*4)+(3*5)=24
+         
+SOLUTION:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	
+	int t,n;
+	cin>>t;
+	while(t--){
+	    cin>>n;
+	    int sum=0;
+	    int A[n],B[n];
+	    for(int i=0;i<n;i++){
+	        cin>>A[i];
+	    }
+	    for(int i=0;i<n;i++){
+	        cin>>B[i];
+	    }
+	    sort(A, A+n);
+	    sort(B, B+n);
+	    for(int i=0;i<n;i++){
+	        sum=sum+(A[i]*B[i]);
+	    }
+	    cout<<sum<<endl;
+	}
+	return 0;
+}
