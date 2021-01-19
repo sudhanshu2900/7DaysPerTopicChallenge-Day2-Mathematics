@@ -1,0 +1,20 @@
+Fibonacci series= 0 1 1 2 3 5 8 13 21 34 55 ......
+
+PROBLEM: I/P- N=34
+         O/P- Yes
+         
+         I/P- N=47
+         O/P- No
+         
+SOLUTION:
+
+string checkFibonacci(int N){
+        
+        int a= 5*N*N-4, b=5*N*N+4;
+        int s1= sqrt(a), s2 = sqrt(b);
+        
+        if((s1*s1 == a)||(s2*s2 == b)){
+            return "Yes";
+        }
+        return "No";
+    }
