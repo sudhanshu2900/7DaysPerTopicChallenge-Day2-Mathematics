@@ -1,0 +1,21 @@
+PROBLEM: I/P- N=25
+         O/P- 0
+         
+         Explain: Sum of digit (2+5=7), then divide 25/7=3 and 25%7=4. So there is not proper division possible.
+         
+SOLUTION:
+
+    int isDivisible(int N) {
+       
+        int sum=0,n=N;
+        while(N!=0){
+            sum=sum+(N%10);
+            N=N/10;
+        }
+        if(n%sum==0){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
