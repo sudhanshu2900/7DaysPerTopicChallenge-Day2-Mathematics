@@ -1,0 +1,20 @@
+PROBLEM: I/P- N=30
+         O/P- 10
+         
+         Explain- 30 -> 11110 in binary. Then we change even place digits to '0'. It become 01010, so answer is 10 (10 -> 01010 in binary).
+         
+SOLUTION:
+
+long long int convertEvenBitToZero(long long int n) {
+     return (n & 0xaaaaaaaa);
+}
+    
+    
+    
+----------------------------**********************----------------------------------------
+
+The number 0xAAAAAAAA is a 32 bit number with all even bits set as 1 and all odd bits as 0.
+Set all even bits of x to 0 by doing bitwise and of x with 0xAAAAAAAA.
+
+And, for some more info,
+The number 0x55555555 is a 32 bit number with all odd bits set as 1 and all even bits as 0.
