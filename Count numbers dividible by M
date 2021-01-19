@@ -1,0 +1,20 @@
+PROBLEM: I/P- A=6, B=15, M=3
+         O/P- 4
+         
+         Explain: 6, 9, 12, 15 are divisible by 3.Hence answer is 4.
+         
+SOLUTION:
+
+int countDivisibles(int A, int B, int M) {
+        
+        int cnt=0;
+        jm:
+        if(B>=A){
+            if(A%M==0){
+                cnt++;
+            }
+            A++;
+            goto jm;
+        }
+        return cnt;
+    }
