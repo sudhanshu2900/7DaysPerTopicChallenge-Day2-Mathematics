@@ -1,0 +1,19 @@
+PROBLEM: I/P- N=100, M=4
+         O/p- 12
+         
+         I/P- N=10, M=5
+         O/P- 0
+         
+         Explain- 100, 50, 25, 12
+                  10, 5, 2, 1, 0
+                  
+                  
+SOLUTION:
+
+int mthHalf(int N, int M){
+       
+        for(int i=1;i<M;i++){
+            N=N/2;
+        }
+        return N;
+    }
