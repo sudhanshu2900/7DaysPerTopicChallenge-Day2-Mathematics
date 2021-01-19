@@ -1,0 +1,30 @@
+PROBLEM: I/P- X=5             (SquareRoot(5)=2.76, so we take floor of it, now we get 2)
+         O/P- 2
+         
+         I/P- X=4             (SquareRoot(4)=2)
+         O/P- 2
+         
+SOLUTION:
+
+long long int floorSqrt(long long int x) 
+{
+    long long int i;
+    for(i=0;i*i<=x;){
+        if(i*i==x){
+            return i;
+        }
+        else{
+            i++;
+        }
+    }
+    return (i-1);
+}
+
+
+
+---------------OR-----------------
+
+long long int floorSqrt(long long int x)
+{
+    return floor(sqrt(x));
+}
